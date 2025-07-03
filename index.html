@@ -1,0 +1,580 @@
+<!--
+  Greetings!
+
+  This delightful template has been meticulously crafted and brought to life by Syed Mohsin. It is generously shared with the world, inviting you to unleash your creativity and tailor it to your heart's content.
+-->
+
+<!-- For any inquiries or collaborations reach out to me at devsyedmohsin@gmail.com -->
+
+<!--
+  Embrace the guidance inscribed within the comments below to fashion an awe-inspiring portfolio of your own.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Read and update content attributes accordingly  -->
+
+  <meta name="description"
+    content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations." />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="Muhammad Nasser's Portfolio">
+  <meta itemprop="description"
+    content="Welcome to my portfolio website. I am a Game Developer specializing in Unity, C#, and AR/VR development. Explore my projects, experience in cognitive games, and educational simulations.">
+
+  <!-- Reference screenshot of updated site's header in place of content -->
+  <meta itemprop="image" content="assets/images/sharing-card.png">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://mu-n.github.io">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Nasser's Portfolio">
+  <meta property="og:description"
+    content="Welcome to my portfolio website. I am a Game Developer specializing in Unity, C#, and AR/VR development. Explore my projects, experience in cognitive games, and educational simulations.">
+
+  <!-- Reference screenshot of updated site's header in content -->
+  <meta property="og:image" content="assets/images/sharing-card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Nasser's Portfolio">
+  <meta name="twitter:description"
+    content="Welcome to my portfolio website. I am a Game Developer specializing in Unity, C#, and AR/VR development. Explore my projects, experience in cognitive games, and educational simulations.">
+
+  <!-- Reference screenshot of updated site's header in content -->
+  <meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+  <!-- Update favicon href attribute with image of yourself -->
+  <link rel="shortcut icon" href="assets/images/favicons.png" type="image/png" />
+
+  <!-- Preloading fonts for better performance -->
+
+  <link rel="preload" href="assets/fonts/Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <!-- Your name here -->
+  <title>Muhammad Nasser's Portfolio</title>
+</head>
+
+<body>
+
+  <script>
+    const theme = localStorage.getItem("theme") || "dark";
+    document.body.classList.add(theme);
+  </script>
+
+  <header class="header">
+
+    <div class="menu-btn-container">
+      <div class="container">
+        <button type="button" class="menu-btn">menu</button>
+      </div>
+    </div>
+
+    <nav class="nav hidden">
+      <ol class="nav-items">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#work">My Work</a></li>
+        <li class="nav-item"><a href="#skills">My Skills</a></li>
+        <li class="nav-item"><a href="#contact" data-focused="last-focused">Contact</a></li>
+        <li class="nav-item"><a href="assets/documents/Muhammad_Nasser_Game_Dev_CV.pdf" download>Download CV</a></li>
+      </ol>
+    </nav>
+
+    <div class="container">
+      <div class="header-textbox">
+        <!-- Replace with your name and job title -->
+        <h1 class="h1">
+          <span>Hi, I'm Muhammad Nasser</span>
+          <span>Game Developer</span>
+        </h1>
+
+        <!-- Add a small introductory paragraph about yourself -->
+        <p class="header-text">
+          A passionate Game Developer specializing in Unity, C#, and AR/VR development.
+          I create immersive gaming experiences and cognitive training applications with
+          a focus on performance and innovation.
+        </p>
+
+        <div class="header-btns">
+          <a href="#contact" class="btn btn-cta">Contact Me</a>
+          <a href="#work" class="btn btn-secondary">See my work</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="work">
+      <div class="container">
+        <h2 class="h2" id="work">Selected Work</h2>
+        <div class="work-boxes">
+        
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Educational VR Projects</h3>
+              <p class="work-text">
+                Developed immersive VR educational experiences and classroom simulations
+                to enhance student learning and teacher training.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>VR</li>
+                <li>C#</li>
+                <li>Education</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtube.com/playlist?list=PLJZJ6WMAnJ9IVBdkRz39kX3mkG9l-TUZh&si=rpSKe22aNAzLjtmM" target="_blank" rel="noopener" class="link">Watch Demos</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/educational-vr.webp" alt="Educational VR Projects" />
+                </div>
+               
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/educational-vr-2.webp"
+                    alt="Educational VR Projects Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/educational-vr-3.webp"
+                    alt="Educational VR Projects Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/educational-vr-4.webp"
+                    alt="Educational VR Projects Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/educational-vr-5.webp"
+                    alt="Educational VR Projects Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+                <button class="media-dot" aria-label="Go to slide 3"></button>
+                <button class="media-dot" aria-label="Go to slide 4"></button>
+                <button class="media-dot" aria-label="Go to slide 5"></button>  
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Interactive E-Learning & Digital Textbook Platform</h3>
+              <p class="work-text">
+                Built a feature-rich interactive e-learning platform using Unity and C# that transforms 
+                traditional textbooks into dynamic learning experiences with annotation tools, interactive 
+                exercises, and comprehensive user settings.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>E-Learning</li>
+                <li>EdTech</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/R_FoSIPapGA?si=EGqGsKXNXnnDrjCA" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/ekit-1.webp" alt="eKit Demo" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/ekit-2.webp" alt="eKit Demo Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/ekit-3.webp" alt="eKit Demo Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/ekit-4.webp" alt="eKit Demo Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/ekit-5.webp" alt="eKit Demo Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/ekit-6.webp" alt="eKit Demo Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+                <button class="media-dot" aria-label="Go to slide 3"></button>
+                <button class="media-dot" aria-label="Go to slide 4"></button>
+                <button class="media-dot" aria-label="Go to slide 5"></button>
+                <button class="media-dot" aria-label="Go to slide 6"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Shuffleboard Game</h3>
+              <p class="work-text">
+                Developed a multiplayer shuffleboard game with real-time gameplay using Unity,
+                Photon for networking, and PlayFab for backend services.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>Photon</li>
+                <li>PlayFab</li>
+                <li>Multiplayer</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/OoNKMp-sMic" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/shuffleboard.webp" alt="Shuffleboard Game" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/shuffleboard-2.webp" alt="Shuffleboard Game Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Wordle Clone</h3>
+              <p class="work-text">
+                Created a clone of the popular "Wordle" word-guessing game with additional features
+                including a global scoreboard and custom word lists.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>UI/UX</li>
+                <li>Game Design</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/sCkorws8JxU" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/wordle.webp" alt="Wordle Clone" />
+                </div>
+              
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/wordle-2.webp" alt="Wordle Clone Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Stroop Color Game</h3>
+              <p class="work-text">
+                Developed an endless runner game with cognitive challenges based on the Stroop effect,
+                testing players' attention and processing speed.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Game Design</li>
+                <li>Psychology</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/HvcnIQQrvi0" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/stroop.webp" alt="Stroop Color Game" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/stroop-2.webp" alt="Stroop Color Game Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Information Runner Game</h3>
+              <p class="work-text">
+                Created an endless runner with progressive question-based gameplay structure, combining
+                fast-paced action with educational challenges.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Educational Games</li>
+                <li>Game Design</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/0ZXDZD2iqE0" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/info-runner.webp" alt="Information Runner Game" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/info-runner-2.webp" alt="Information Runner Game Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Super Business Woman</h3>
+              <p class="work-text">
+                Developed a clone of the popular "Money Honey!" by Rollic, featuring business simulation
+                gameplay with strategic resource management.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Mobile Development</li>
+                <li>Hyper-casual</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/2D8-JHI1jEs" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/business-woman.webp" alt="Super Business Woman Game" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/business-woman-2.webp" alt="Super Business Woman Game Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Hide and Find the Octopuses</h3>
+              <p class="work-text">
+                Created an engaging discovery game where players search for hidden octopuses in various
+                environments, promoting observation skills and attention to detail.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Casual Games</li>
+                <li>Educational</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtube.com/shorts/EFt1bdNWc-w" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/octopus-game.webp" alt="Hide and Find the Octopuses Game" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/octopus-game-2.webp" alt="Hide and Find the Octopuses Game Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-box">
+            <div class="work-textbox">
+              <h3 class="h3">Water Cup Challenge</h3>
+              <p class="work-text">
+                Designed a physics-based game that challenges players to carefully transport water cups
+                without spillage, featuring realistic fluid dynamics and progressively difficult levels.
+              </p>
+              <ol class="work-technologies">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Physics Simulation</li>
+                <li>Mobile Development</li>
+              </ol>
+              <div class="work-links">
+                <a href="https://youtu.be/LZzx2CEb_tE" target="_blank" rel="noopener" class="link">Watch Demo</a>
+              </div>
+            </div>
+            <div class="work-media">
+              <div class="media-gallery">
+                <div class="media-item active">
+                  <img loading="lazy" src="assets/images/work/water-cup.webp" alt="Water Cup Challenge Game" /> 
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/water-cup-2.webp" alt="Water Cup Challenge Game Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/water-cup-3.webp" alt="Water Cup Challenge Game Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/water-cup-4.webp" alt="Water Cup Challenge Game Screenshot" />
+                </div>
+                <div class="media-item">
+                  <img loading="lazy" src="assets/images/work/water-cup-5.webp" alt="Water Cup Challenge Game Screenshot" />
+                </div>
+              </div>
+              <div class="media-dots">
+                <button class="media-dot active" aria-label="Go to slide 1"></button>
+                <button class="media-dot" aria-label="Go to slide 2"></button> 
+                <button class="media-dot" aria-label="Go to slide 3"></button>
+                <button class="media-dot" aria-label="Go to slide 4"></button>
+                <button class="media-dot" aria-label="Go to slide 5"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const galleries = document.querySelectorAll('.media-gallery');
+
+        galleries.forEach(gallery => {
+          const items = gallery.querySelectorAll('.media-item');
+          const dots = gallery.parentElement.querySelectorAll('.media-dot');
+          let currentIndex = 0;
+
+          function showItem(index) {
+            items.forEach(item => item.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            items[index].classList.add('active');
+            dots[index].classList.add('active');
+          }
+
+          dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+              currentIndex = index;
+              showItem(currentIndex);
+            });
+          });
+
+          // Optional: Auto-advance slides every 5 seconds
+          setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showItem(currentIndex);
+          }, 5000);
+        });
+      });
+    </script>
+
+    <section class="skills">
+      <div class="container">
+        <h2 class="h2" id="skills">My Toolkit</h2>
+        <div class="skills-imgs">
+          <img src="assets/images/skills/unity.webp" alt="Unity" class="skills-img" loading="lazy" title="Unity">
+          <img src="assets/images/skills/csharp.webp" alt="C#" class="skills-img" loading="lazy" title="C#">
+          <img src="assets/images/skills/vr.webp" alt="VR Development" class="skills-img" loading="lazy"
+            title="VR Development">
+          <img src="assets/images/skills/ai.webp" alt="AI Integration" class="skills-img" loading="lazy"
+            title="AI Integration">
+          <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+          <img src="assets/images/skills/cpp.webp" alt="C++" class="skills-img" loading="lazy" title="C++">
+          <img src="assets/images/skills/unreal.webp" alt="Unreal Engine" class="skills-img" loading="lazy"
+            title="Unreal Engine">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact">
+      <div class="container">
+        <h2 class="h2" id="contact">Contact Me</h2>
+        <div class="contact-content">
+          <div class="contact-textbox">
+            <strong href="#" class="hire-alert">
+              <span class="indicator"></span>
+              Available for opportunities
+            </strong>
+            <p class="contact-text">
+              As a Game Developer, I specialize in creating immersive experiences using Unity, C#, and AR/VR
+              technologies.
+              I have a strong focus on cognitive games, educational simulations, and innovative AI integration.
+            </p>
+            <p class="contact-text">
+              Based in Cairo, Egypt, I'm passionate about pushing the boundaries of what's possible in game development
+              and creating meaningful interactive experiences.
+            </p>
+            <div class="contact-info">
+              <p>📞 +201147472803</p>
+              <p>📍 Cairo, Egypt</p>
+              <p>✉️ <a href="mailto:muhammedn.elsayed@gmail.com" class="email-link">muhammedn.elsayed@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <nav>
+          <ol class="footer-links">
+            <li class="footer-link">
+              <a title="GitHub" href="https://github.com/MU-N" target="_blank" rel="noopener">
+                <img loading="lazy" src="assets/images/social-links/github.svg" alt="GitHub" />
+              </a>
+            </li>
+            <li class="footer-link">
+              <a title="LinkedIn" href="https://linkedin.com/in/mu-n" target="_blank" rel="noopener">
+                <img loading="lazy" src="assets/images/social-links/linkedin.svg" alt="LinkedIn" />
+              </a>
+          </ol>
+        </nav>
+        <p class="footer-text">
+          &copy; <span>2024</span> - Muhammad Nasser
+        </p>
+        <label class="theme-switch" for="theme-switch">
+          <span>Dark Theme</span>
+          <input type="checkbox" id="theme-switch" role="switch" />
+        </label>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
