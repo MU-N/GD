@@ -21,15 +21,20 @@ export default function Work() {
     const r = card.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width; // 0..1
     const py = (e.clientY - r.top) / r.height;
-    card.style.setProperty("--ry", `${(px - 0.5) * 12}deg`);
-    card.style.setProperty("--rx", `${(0.5 - py) * 12}deg`);
+    card.style.setProperty("--ry", `${(px - 0.5) * 20}deg`);
+    card.style.setProperty("--rx", `${(0.5 - py) * 20}deg`);
     card.style.setProperty("--mx", `${px * 100}%`);
     card.style.setProperty("--my", `${py * 100}%`);
+    // glare follows the cursor across the surface
+    card.style.setProperty("--gx", `${px * 100}%`);
+    card.style.setProperty("--gy", `${py * 100}%`);
+    card.style.setProperty("--lift", "1");
   };
   const onLeave = (e) => {
     const card = e.currentTarget;
     card.style.setProperty("--ry", "0deg");
     card.style.setProperty("--rx", "0deg");
+    card.style.setProperty("--lift", "0");
   };
 
   return (
@@ -62,6 +67,7 @@ export default function Work() {
             onMouseLeave={onLeave}
           >
             <div className="card-inner">
+              <i className="card-glare" aria-hidden="true" />
               <div className="card-media">
                 <img loading="lazy" src={p.image} alt={p.title} />
                 <span className="card-cta">View ↗</span>

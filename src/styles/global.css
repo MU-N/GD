@@ -46,6 +46,7 @@ canvas {
 
 /* ---- Scroll overlay (drei <Scroll html>) ---------------------------------- */
 .section {
+  position: relative;
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -55,6 +56,23 @@ canvas {
   text-align: center;
   padding: clamp(1.5rem, 6vw, 6rem);
   pointer-events: none;
+}
+
+/* Soft radial scrim behind the copy so the glowing 3D scene never washes out
+   the text. Darkens the center, fades to fully transparent at the edges so the
+   level stays visible. */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 62% 55% at 50% 50%,
+    rgba(5, 6, 12, 0.78),
+    rgba(5, 6, 12, 0.45) 45%,
+    transparent 72%
+  );
 }
 
 .section > * {
@@ -85,6 +103,7 @@ h1.title {
   font-weight: 800;
   letter-spacing: -0.03em;
   max-width: 16ch;
+  text-shadow: 0 2px 30px rgba(5, 6, 12, 0.8);
 }
 
 h2.title {
@@ -97,9 +116,10 @@ h2.title {
 .lead {
   margin: 1.5rem auto 0;
   max-width: 46ch;
-  color: var(--muted);
+  color: #c2c5d2;
   font-size: clamp(1rem, 1.4vw, 1.18rem);
   line-height: 1.6;
+  text-shadow: 0 1px 18px rgba(5, 6, 12, 0.9);
 }
 
 .row {
@@ -189,7 +209,10 @@ h2.title {
   --ry: 0deg;
   --mx: 50%;
   --my: 50%;
-  perspective: 900px;
+  --gx: 50%;
+  --gy: 50%;
+  --lift: 0;
+  perspective: 700px;
   text-decoration: none;
   color: inherit;
   animation: card-in 0.5s ease both;
@@ -208,13 +231,50 @@ h2.title {
   border-radius: 16px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
-  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform: rotateX(var(--rx)) rotateY(var(--ry))
+    translateZ(calc(var(--lift) * 30px)) scale(calc(1 + var(--lift) * 0.02));
   transform-style: preserve-3d;
-  transition: transform 0.18s ease, border-color 0.25s ease;
+  transition: transform 0.18s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: calc((var(--ry) / 20deg) * -22px)
+    calc((var(--rx) / 20deg) * 22px + var(--lift) * 8px)
+    calc(28px + var(--lift) * 22px) rgba(3, 4, 10, calc(0.35 + var(--lift) * 0.3));
 }
 
 .card:hover .card-inner {
   border-color: var(--accent);
+}
+
+/* the media + body float forward off the card plane for real parallax depth */
+.card-media,
+.card-body {
+  transform: translateZ(calc(var(--lift) * 38px));
+  transition: transform 0.18s ease;
+}
+
+.card-body {
+  transform: translateZ(calc(var(--lift) * 22px));
+}
+
+/* moving sheen that catches the "light" as the card tilts */
+.card-glare {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: inherit;
+  opacity: 0;
+  mix-blend-mode: overlay;
+  transition: opacity 0.25s ease;
+  background: radial-gradient(
+    420px circle at var(--gx) var(--gy),
+    rgba(255, 255, 255, 0.35),
+    transparent 55%
+  );
+}
+
+.card:hover .card-glare {
+  opacity: 1;
 }
 
 /* spotlight glow following the cursor */
