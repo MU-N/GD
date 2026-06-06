@@ -31,6 +31,9 @@ jobs:
 
   deploy:
     needs: build
+    # The github-pages environment only permits deploys from the default
+    # branch, so feature-branch pushes build (for CI) but skip deploy.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
